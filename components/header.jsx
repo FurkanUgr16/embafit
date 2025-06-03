@@ -13,12 +13,12 @@ export default function Header(){
                 <Image src={Logo} width={180} height={180} alt="logo img"></Image>             
             </div>
 
-               <div className=" top-fullw-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+               <div className=" top-full w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="w-[80%] border-t border-gray-300"></div>
                 </div>  
 
               <nav>
-                <ul className=" mt-6 flex justify-evenly font-anton text-xl opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <ul className=" mt-6 flex justify-evenly font-blackOpsOne text-xl opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <li className="hover:text-brandYellow active:text-brandYellow"><Link href="/">Hakkımızda</Link></li>
                     <li className="hover:text-brandYellow  active:text-brandYellow "><Link href={"/"}>Hakkımızda</Link></li>
                     <li className="hover:text-brandYellow  active:text-brandYellow"><Link href={"/"}>Hakkımızda</Link></li>
