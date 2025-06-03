@@ -2,8 +2,8 @@ import { Anton, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
- const anton = Anton({ weight: "400", subsets: ["latin"], display: "swap" });
- const openSans = Open_Sans({ subsets: ["latin"], display: "swap" });
+//  const anton = Anton({ weight: "400", subsets: ["latin"], display: "swap" });
+//  const openSans = Open_Sans({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: "Create Next App",

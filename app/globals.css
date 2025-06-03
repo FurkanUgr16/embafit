@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
 
 
-@theme {
-  --font-header: "Anton", "sans-serif"; 
+
+@theme{
+  --font-anton: "Anton", sans-serif;
+  --font-openSans: "Open Sans", sans-serif;
+  --color-brandYellow: #fff100;
+  
 }
+
