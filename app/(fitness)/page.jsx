@@ -1,7 +1,7 @@
-import Header from "@/components/header";
+
 import Hero from "@/components/hero";
 import ImageText from "@/components/imageText";
-import Image1 from "../assets/pexels-victorfreitas-949129.jpg";
+import Image1 from "@/assets/pexels-victorfreitas-949129.jpg";
 import ImageSlider from "@/components/imageSlider";
 import Card from "@/components/card";
 
@@ -14,7 +14,6 @@ export default function Home() {
   ]
 
   return <>
-  <Header/>
   <Hero />
   <ImageText 
     imageUrl={Image1} alt="deadlift"
