@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 
-export default function ImageSlider({ children }){
+export default function Carousel({ children }){
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -23,17 +23,16 @@ export default function ImageSlider({ children }){
   useEffect(() => {
     if (carouselRef.current) {
       const cardWidth = carouselRef.current.children[0].offsetWidth;
-      // Kaydırma efektini daha yumuşak ve görseldeki gibi yapmak için
       carouselRef.current.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
     }
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full overflow-hidden flex items-center px-16"> {/* px-16 oklar için boşluk bırakır */}
+    <div className=" w-full overflow-hidden flex justify-between items-center px-8">
       <button
         onClick={() => slide(-1)}
-        className={`absolute top-1/2 -translate-y-1/2 left-4 bg-brandYellow/70 hover:bg-brandYellow text-white p-3 rounded-full shadow-lg text-2xl z-20 transition-colors duration-300 ${
-          currentIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''
+        className={` bg-brandYellow/60 hover:bg-brandYellow text-white p-3 rounded-full shadow-lg text-2xl z-20 transition-colors duration-300 ${
+          currentIndex === 0 ? 'opacity-0' : ''
         }`}
         disabled={currentIndex === 0}
       >
@@ -41,7 +40,7 @@ export default function ImageSlider({ children }){
       </button>
       <div className="overflow-hidden flex-grow">
         <div
-          className="flex transition-transform duration-500 ease-in-out py-4 justify-center " // py-4 yukarıdan aşağıdan boşluk için
+          className="flex transition-transform duration-500 ease-in-out py-4  " 
           ref={carouselRef}
         >
           {children}
@@ -49,8 +48,8 @@ export default function ImageSlider({ children }){
       </div>
       <button
         onClick={() => slide(1)}
-        className={`absolute top-1/2 -translate-y-1/2 right-4 bg-brandYellow/70 hover:bg-brandYellow text-white p-3 rounded-full shadow-lg text-2xl z-20 transition-colors duration-300 ${
-          currentIndex >= totalCards - cardsPerPage ? 'opacity-50 cursor-not-allowed' : ''
+        className={` bg-brandYellow/60 hover:bg-brandYellow text-white p-3 rounded-full shadow-lg text-2xl z-20 transition-colors duration-300 ${
+          currentIndex >= totalCards - cardsPerPage ? 'opacity-0' : ''
         }`}
         disabled={currentIndex >= totalCards - cardsPerPage}
       >

@@ -2,7 +2,7 @@
 import Hero from "@/components/hero";
 import ImageText from "@/components/imageText";
 import Image1 from "@/assets/pexels-victorfreitas-949129.jpg";
-import ImageSlider from "@/components/imageSlider";
+import Carousel from "@/components/carousel";
 import Card from "@/components/card";
 
 
@@ -40,10 +40,13 @@ export default function Home() {
   />
 
 
-  <h1>HEADER</h1>
+      <div className="text-center mt-[60] mb-[30]">
+          <h1 className=" font-blackOpsOne text-4xl text-brandYellow uppercase  ">HEADER</h1>
+          <p className="font-openSans capitalize">Subtext</p>
+      </div>
 
-  <ImageSlider>
-    <Card
+      <Carousel>
+          <Card
             title="Ürün 1"
             description="Bu, ürünlerinizden biri için harika bir açıklama."
             imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg"
@@ -56,19 +59,19 @@ export default function Home() {
           <Card
             title="BOX"
             description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="https://via.placeholder.com/600x800/555555/FFFFFF?text=BOX"
+            imageUrl="/pexels-victorfreitas-949129.jpg"
           />
           <Card
             title="BOX"
             description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="https://via.placeholder.com/600x800/555555/FFFFFF?text=BOX"
+            imageUrl="/pexels-victorfreitas-949129.jpg"
           />
           <Card
             title="BOX"
             description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="https://via.placeholder.com/600x800/555555/FFFFFF?text=BOX"
+            imageUrl="/pexels-victorfreitas-949129.jpg"
           />
-  </ImageSlider>
+  </Carousel>
   
   </>
 
