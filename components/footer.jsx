@@ -1,11 +1,12 @@
+
 import Image from "next/image"
 import Link from "next/link"
-
+import Instagram from "./Instagram"
 
 
 export default function Footer(){
     return(
-        <footer className="relative">
+        <footer className="relative text-center">
             <div className=" mt-[60px] flex justify-center w-full top-full ">
                 <div className="w-[80%] border-t border-gray-300 "></div>    
             </div> 
@@ -18,14 +19,15 @@ export default function Footer(){
             />
            
 
-            <ul className=" font-openSans flex flex-col ">
+            <ul className=" font-openSans text-center flex flex-col ">
                 <p className="font-blackOpsOne">Linkler</p>
-                <li><Link href="/">Anasayfa</Link></li>
-                <li><Link href="/kyokushin">Kyokushin</Link></li>
+                <li className="hover:text-brandYellow"><Link href="/">Anasayfa</Link></li>
+                <li className="hover:text-brandYellow"><Link href="/kyokushin">Kyokushin</Link></li>
             </ul>
 
             <div>
-                İnstagram
+                <p className="m-2.5 font-blackOpsOne">Sosyal Medya</p>
+                <Instagram />
             </div>
             </div>
         </footer>

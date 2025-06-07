@@ -1,7 +1,7 @@
 import Image from "next/image"
 export default function ImageText({imageUrl, title, description, reverse, alt}){
     return(
-        <section className={`flex flex-col md:flex-row items-center justify-around gap-10 px-24 py-12 text-center mb-[40px] ${reverse && "md:flex-row-reverse md:w-full"}`}>
+        <section className={`flex flex-col md:flex-row items-center justify-around gap-10 mx-3 px-24 py-12 text-center mb-[40px] ${reverse && "md:flex-row-reverse md:w-full"}`}>
             <div className="w-full md:h-1/2">
                 {
                     imageUrl && 

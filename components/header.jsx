@@ -10,7 +10,9 @@ export default function Header(){
         <header className="relative group py-4">
 
             <div className="flex justify-center items-center">
-                <Image src={Logo} width={180} height={180} alt="logo img"></Image>             
+                <Link href="/" >
+                    <Image className="flex justify-center items-center" src={Logo} width={180} height={180} alt="logo img"></Image>     
+                </Link>        
             </div>
 
                <div className=" top-full w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -19,10 +21,10 @@ export default function Header(){
 
               <nav>
                 <ul className=" mt-6 flex justify-evenly font-blackOpsOne text-xl opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href="/">Hakkımızda</Link></li>
-                    <li className="hover:text-brandYellow  active:text-brandYellow "><Link href={"/"}>Hakkımızda</Link></li>
-                    <li className="hover:text-brandYellow  active:text-brandYellow"><Link href={"/"}>Hakkımızda</Link></li>
-                    <li className="hover:text-brandYellow  active:text-brandYellow"><Link href={"/"}>Hakkımızda</Link></li>
+                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href="/">Anasayfa</Link></li>
+                    <li className="hover:text-brandYellow  active:text-brandYellow "><Link href={"/kyokushin"}>Kyokushin</Link></li>
+                    <li className="hover:text-brandYellow  active:text-brandYellow"><Link href={"/hakkimizda"}>Hakkımızda</Link></li>
+                    <li className="hover:text-brandYellow  active:text-brandYellow"><Link href={"/iletisim"}>İletişim</Link></li>
                 </ul>
             </nav>
         </header>
