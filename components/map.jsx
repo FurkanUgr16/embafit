@@ -2,7 +2,7 @@
 import { useState, useCallback, use } from 'react';
 import { GoogleMap, useJsApiLoader, MarkerF } from '@react-google-maps/api';
 
-40.214868214554855, 28.921803225050642
+
 
 const location = {
     lat: 40.214868214554855,
