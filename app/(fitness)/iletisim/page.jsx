@@ -1,8 +1,9 @@
+import ContactInfo from "@/components/contactInfo"
 import Map from "@/components/map"
 export default function Contact(){
     return(
         <>
-            <h1>İletişim</h1>
+            <ContactInfo />
             <Map />
         </>
     )
