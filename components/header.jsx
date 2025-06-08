@@ -3,6 +3,8 @@ import { useState } from "react"
 import Image from "next/image"
 import Logo from "../assets/EMBAFIT-01.png"
 import Link from "next/link"
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Header(){
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -16,7 +18,7 @@ export default function Header(){
     }
 
     return(
-        <header className="relative group py-4">
+        <header className="relative group py-4 bg-gray-50">
             <div className="flex justify-center items-center relative">
                 <Link href="/" >
                     <Image className="flex justify-center items-center" src={Logo} width={180} height={180} alt="logo img"></Image>     
@@ -30,9 +32,7 @@ export default function Header(){
                     onClick={toggleMenu}
                     aria-label="Menu"
                 >
-                    <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-                    <div className={`w-6 h-0.5 bg-black mb-1.5 transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
-                    <div className={`w-6 h-0.5 bg-black transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+                    {!isMenuOpen ? <MenuIcon fontSize="large"/> : <CloseIcon fontSize="large"/> }
                 </button>
             </div>
 
@@ -53,8 +53,8 @@ export default function Header(){
             </nav>
 
             {/* Mobile Navigation Menu */}
-            <div className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={closeMenu}>
-                <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
+            <div className={`md:hidden fixed inset-0 bg-black bg-opacity-0 z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={closeMenu}>
+                <div className={`fixed top-0 right-0 h-full w-64 bg-gray-50 shadow-lg transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
                     <nav className="pt-20 px-6">
                         <ul className="space-y-6 font-blackOpsOne text-xl">
                             <li>

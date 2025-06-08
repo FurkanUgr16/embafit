@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Card ({title, description, imageUrl}){
     return (
-        <div className="relative w-full sm:w-[300px] md:w-[320px] lg:w-[350px] mx-2 sm:mx-3 md:mx-4 overflow-hidden flex-shrink-0 group rounded-lg sm:rounded-xl shadow-lg">
+        <div className="relative w-full sm:w-[300px] md:w-[320px] lg:w-[350px] overflow-hidden flex-shrink-0 group rounded-lg sm:rounded-xl shadow-lg">
   
             {imageUrl && (
                 <Image

@@ -8,9 +8,6 @@ export default function Hero(){
                 <p className="mt-2 sm:mt-3 md:mt-4 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto text-center text-sm sm:text-lg md:text-xl lg:text-2xl font-openSans tracking-wide capitalize px-4 sm:px-0">
                     en İyi vücudu inşa et
                 </p>
-
-                {/* <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white [clip-path:polygon(0_100%,100%_0,100%_100%,0%_100%)]">
-                </div> */}
             </div>
         </section>
     )

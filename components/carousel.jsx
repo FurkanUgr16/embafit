@@ -47,7 +47,8 @@ export default function Carousel({ children }){
   useEffect(() => {
     if (carouselRef.current && carouselRef.current.children[0]) {
       const cardWidth = carouselRef.current.children[0].offsetWidth;
-      const gap = window.innerWidth < 640 ? 0 : window.innerWidth < 1024 ? 16 : 24; // Responsive gap
+      // CSS gap değerleriyle tutarlı olacak şekilde düzeltildi
+      const gap = window.innerWidth < 640 ? 8 : window.innerWidth < 1024 ? 16 : 24; // 8px, 16px, 24px
       carouselRef.current.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
     }
   }, [currentIndex, cardsPerPage]);
@@ -69,7 +70,7 @@ export default function Carousel({ children }){
       
       <div className="overflow-hidden flex-grow mx-2 sm:mx-3 md:mx-4">
         <div
-          className="flex transition-transform duration-500 ease-in-out py-2 sm:py-3 md:py-4 gap-0 sm:gap-4 md:gap-6" 
+          className="flex transition-transform duration-500 ease-in-out py-2 sm:py-3 md:py-4 gap-2 sm:gap-4 md:gap-6" 
           ref={carouselRef}
         >
           {children}
@@ -88,20 +89,6 @@ export default function Carousel({ children }){
           <path d="M6.18194 4.18185C6.35767 4.00611 6.6426 4.00611 6.81833 4.18185L9.81833 7.18185C9.90272 7.26624 9.95013 7.3807 9.95013 7.50005C9.95013 7.6194 9.90272 7.73386 9.81833 7.81825L6.81833 10.8182C6.6426 10.994 6.35767 10.994 6.18194 10.8182C6.0062 10.6425 6.0062 10.3576 6.18194 10.1819L8.86374 7.50005L6.18194 4.81825C6.0062 4.64251 6.0062 4.35759 6.18194 4.18185Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
         </svg>
       </button>
-
-      {/* Dots indicator for mobile */}
-      <div className="sm:hidden absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {Array.from({ length: Math.ceil(totalCards / cardsPerPage) }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index * cardsPerPage)}
-            className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-              Math.floor(currentIndex / cardsPerPage) === index ? 'bg-brandYellow' : 'bg-gray-300'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
