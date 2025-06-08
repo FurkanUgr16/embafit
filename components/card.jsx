@@ -1,23 +1,31 @@
 import Image from "next/image"
+
 export default function Card ({title, description, imageUrl}){
     return (
-    <div className="relative w-[350] mx-4 overflow-hidden flex-shrink-0 group ">
+        <div className="relative w-full sm:w-[300px] md:w-[320px] lg:w-[350px] mx-2 sm:mx-3 md:mx-4 overflow-hidden flex-shrink-0 group rounded-lg sm:rounded-xl shadow-lg">
   
-      {imageUrl && (
-        <Image
-          width={350}
-          height={600}
-          src={imageUrl}
-          alt={title}
-          className="w-[350] h-[600] object-cover bg-center bg-no-repeat bg-cover transform transition-transform duration-300 group-hover:scale-105" 
-        />
-      )}
+            {imageUrl && (
+                <Image
+                    width={350}
+                    height={600}
+                    src={imageUrl}
+                    alt={title}
+                    className="w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] object-cover transform transition-transform duration-300 group-hover:scale-105" 
+                />
+            )}
 
-      
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-        {title && <h3 className="text-3xl font-bold font-blackOpsOne mb-2 text-center uppercase">{title}</h3>} 
-        {description && <p className="text-sm mb-4 font-openSans text-center">{description}</p>} 
-      </div>
-    </div>
-  );
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4 md:p-5 lg:p-6 text-white">
+                {title && (
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold font-blackOpsOne mb-1 sm:mb-2 text-center uppercase leading-tight">
+                        {title}
+                    </h3>
+                )} 
+                {description && (
+                    <p className="text-xs sm:text-sm md:text-base mb-2 sm:mb-3 md:mb-4 font-openSans text-center leading-relaxed px-1 sm:px-0">
+                        {description}
+                    </p>
+                )} 
+            </div>
+        </div>
+    );
 };
