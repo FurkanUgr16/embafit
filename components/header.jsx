@@ -21,6 +21,8 @@ export default function Header(){
                 <Link href="/" >
                     <Image className="flex justify-center items-center" src={Logo} width={180} height={180} alt="logo img"></Image>     
                 </Link>
+
+                
                 
                 {/* Hamburger Menu Button - Sadece mobilde görünür */}
                 <button 
@@ -35,9 +37,10 @@ export default function Header(){
             </div>
 
             {/* Desktop hover efekti için çizgi */}
-            <div className="hidden md:block top-full w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="w-[80%] border-t border-gray-300"></div>
-            </div>  
+              
+              <div className="top-full w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="w-[80%] border-t border-gray-300"></div>
+                </div> 
 
             {/* Desktop Navigation */}
             <nav className="hidden md:block">

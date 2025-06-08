@@ -6,7 +6,7 @@ export default function Footer(){
     return(
         <footer className="relative text-center px-4 sm:px-6 md:px-8">
             <div className="mt-8 sm:mt-12 md:mt-[60px] flex justify-center w-full">
-                <div className="w-[90%] sm:w-[85%] md:w-[80%] border-t border-gray-300"></div>    
+                <div className="w-full border-t border-gray-300"></div>    
             </div> 
             
             <div className="flex flex-col sm:flex-row justify-center sm:justify-around mt-4 sm:mt-5 items-center gap-6 sm:gap-4 md:gap-0 pb-6 sm:pb-8">
