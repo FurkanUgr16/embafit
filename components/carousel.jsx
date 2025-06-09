@@ -117,7 +117,7 @@ export default function Carousel({ children }){
       </button>
       
       <div 
-        className="overflow-hidden flex-grow mx-0 sm:mx-2 sm:mx-3 md:mx-4 cursor-grab active:cursor-grabbing sm:cursor-default"
+        className="overflow-hidden flex-grow mx-0 sm:mx-2  md:mx-4 cursor-grab active:cursor-grabbing sm:cursor-default"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
