@@ -7,8 +7,6 @@ import Card from "@/components/card";
 
 export default function Home() {
   return <>
-
-  
   <Hero 
     title="DİSİPLİNİNİ GÖSTER"
     text="En İyi vücudu İnşa et"
