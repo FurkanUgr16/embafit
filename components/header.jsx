@@ -1,22 +1,13 @@
-"use client"
-import { useState } from "react"
+import HamburgerMenu from "./HamburgerMenu"
 import Image from "next/image"
 import Logo from "../assets/EMBAFIT-01.png"
 import Link from "next/link"
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import NavLink from "./navLink";
+
+import { menuLinks } from "@/libs/menuLinks";
+
 
 export default function Header(){
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
-    }
-
-    const closeMenu = () => {
-        setIsMenuOpen(false)
-    }
-
     return(
         <header className="relative group py-4 bg-gray-50">
             <div className="flex justify-center items-center relative">
@@ -27,13 +18,8 @@ export default function Header(){
                 
                 
                 {/* Hamburger Menu Button - Sadece mobilde görünür */}
-                <button 
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 md:hidden z-50 p-2"
-                    onClick={toggleMenu}
-                    aria-label="Menu"
-                >
-                    {!isMenuOpen ? <MenuIcon fontSize="large"/> : <CloseIcon fontSize="large"/> }
-                </button>
+                <HamburgerMenu/>
+               
             </div>
 
             {/* Desktop hover efekti için çizgi */}
@@ -45,58 +31,12 @@ export default function Header(){
             {/* Desktop Navigation */}
             <nav className="hidden md:block">
                 <ul className="mt-6 flex justify-evenly font-blackOpsOne text-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href="/">Anasayfa</Link></li>
-                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href={"/kyokushin"}>Kyokushin</Link></li>
-                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href={"/hakkimizda"}>Hakkımızda</Link></li>
-                    <li className="hover:text-brandYellow active:text-brandYellow"><Link href={"/iletisim"}>İletişim</Link></li>
+                        <NavLink
+                           navLink={menuLinks}
+                            classname="hover:text-brandYellow active:text-brandYellow"
+                        />
                 </ul>
             </nav>
-
-            {/* Mobile Navigation Menu */}
-            <div className={`md:hidden fixed inset-0 bg-black bg-opacity-0 z-40 transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={closeMenu}>
-                <div className={`fixed top-0 right-0 h-full w-64 bg-gray-50 shadow-lg transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`} onClick={(e) => e.stopPropagation()}>
-                    <nav className="pt-20 px-6">
-                        <ul className="space-y-6 font-blackOpsOne text-xl">
-                            <li>
-                                <Link 
-                                    href="/" 
-                                    className="block py-2 hover:text-brandYellow active:text-brandYellow transition-colors"
-                                    onClick={closeMenu}
-                                >
-                                    Anasayfa
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="/kyokushin" 
-                                    className="block py-2 hover:text-brandYellow active:text-brandYellow transition-colors"
-                                    onClick={closeMenu}
-                                >
-                                    Kyokushin
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="/hakkimizda" 
-                                    className="block py-2 hover:text-brandYellow active:text-brandYellow transition-colors"
-                                    onClick={closeMenu}
-                                >
-                                    Hakkımızda
-                                </Link>
-                            </li>
-                            <li>
-                                <Link 
-                                    href="/iletisim" 
-                                    className="block py-2 hover:text-brandYellow active:text-brandYellow transition-colors"
-                                    onClick={closeMenu}
-                                >
-                                    İletişim
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
         </header>
     )
 }

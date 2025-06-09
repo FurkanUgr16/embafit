@@ -1,41 +1,30 @@
-
 import Hero from "@/components/hero";
 import ImageText from "@/components/imageText";
-import Image1 from "@/assets/pexels-victorfreitas-949129.jpg";
 import Carousel from "@/components/carousel";
 import Card from "@/components/card";
 
 
+
 export default function Home() {
-
-  const SliderImages = [
-     "/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg",
-     "/pexels-victorfreitas-949131.jpg"
-  ]
-
   return <>
-  <Hero />
-  <ImageText 
-    imageUrl={Image1} alt="deadlift"
-    title="Header"
-    description="Lorem Ipsum is simply dummy 
-    text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+
+  
+  <Hero 
+    title="DİSİPLİNİNİ GÖSTER"
+    text="En İyi vücudu İnşa et"
+    bgImageUrl="/pexels-victorfreitas-791763.jpg"
   />
   <ImageText 
-    imageUrl={Image1} alt="deadlift"
+    imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
     title="Header"
-    description="Lorem Ipsum is simply dummy 
-    text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-      with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non dignissimos porro deserunt iusto a iure aspernatur eaque odio totam reprehenderit, consequuntur cum vero. Ab illum adipisci error nam voluptatibus?
+  Qui delectus vel vero, "
+  />
+  <ImageText 
+    imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
+    title="Header"
+    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non dignissimos porro deserunt iusto a iure aspernatur eaque odio totam reprehenderit, consequuntur cum vero. Ab illum adipisci error nam voluptatibus?
+  Qui delectus vel vero,"
     reverse
   />
 
