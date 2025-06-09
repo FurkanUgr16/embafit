@@ -10,5 +10,6 @@ export const KyokushinMenuLinks = [
     {href: "/kyokushin/grup-dersleri", label: "Grup Dersleri"},
     {href: "/kyokushin/ozel-ders", label: "Özel Ders"},
     {href: "/kyokushin/dojo-kun", label: "Dojo Kun"},
+    { href: '/hakkimizda', label: 'Hakkımızda' },
     { href: '/iletisim', label: 'İletişim' },
 ]

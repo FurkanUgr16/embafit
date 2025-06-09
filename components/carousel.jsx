@@ -6,6 +6,9 @@ export default function Carousel({ children }){
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(3);
   const carouselRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const totalCards = children.length;
 
@@ -36,13 +39,60 @@ export default function Carousel({ children }){
   const slide = (direction) => {
     let newIndex = currentIndex + direction;
 
+    // Başa sarma mantığı
     if (newIndex < 0) {
-      newIndex = 0;
+      newIndex = Math.max(0, totalCards - cardsPerPage);
     } else if (newIndex > totalCards - cardsPerPage) {
-      newIndex = totalCards - cardsPerPage;
+      newIndex = 0;
     }
     setCurrentIndex(newIndex);
   };
+
+  // Touch/Mouse events for mobile swipe
+  const handleTouchStart = (e) => {
+    if (window.innerWidth >= 640) return; // Sadece mobilde çalışsın
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX);
+    setScrollLeft(currentIndex);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging || window.innerWidth >= 640) return;
+    const x = e.touches[0].pageX;
+    const walk = (x - startX);
+    // Kaydırma mesafesine göre card değişimi
+    if (Math.abs(walk) > 50) {
+      if (walk > 0) {
+        slide(-1);
+      } else {
+        slide(1);
+      }
+      setIsDragging(false);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
+  // useEffect ile event listener'ları manuel olarak ekleme
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const handleTouchMovePassive = (e) => {
+      if (isDragging && window.innerWidth < 640) {
+        e.preventDefault();
+      }
+    };
+
+    // Passive olmayan event listener ekle
+    carousel.addEventListener('touchmove', handleTouchMovePassive, { passive: false });
+
+    return () => {
+      carousel.removeEventListener('touchmove', handleTouchMovePassive);
+    };
+  }, [isDragging]);
 
   useEffect(() => {
     if (carouselRef.current && carouselRef.current.children[0]) {
@@ -55,12 +105,10 @@ export default function Carousel({ children }){
 
   return (
     <div className="w-full overflow-hidden flex justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8">
+      {/* Sol Ok - Sadece desktop ve tablet'te görünür */}
       <button
         onClick={() => slide(-1)}
-        className={`bg-brandYellow/60 hover:bg-brandYellow text-white p-2 sm:p-3 rounded-full shadow-lg text-lg sm:text-xl md:text-2xl z-20 transition-colors duration-300 flex-shrink-0 ${
-          currentIndex === 0 ? 'opacity-0 pointer-events-none' : ''
-        }`}
-        disabled={currentIndex === 0}
+        className="hidden sm:flex bg-brandYellow/60 hover:bg-brandYellow text-white p-2 sm:p-3 rounded-full shadow-lg text-lg sm:text-xl md:text-2xl z-20 transition-colors duration-300 flex-shrink-0"
         aria-label="Previous slide"
       >
         <svg width="40" height="40" className="sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px]" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +116,12 @@ export default function Carousel({ children }){
         </svg>
       </button>
       
-      <div className="overflow-hidden flex-grow mx-2 sm:mx-3 md:mx-4">
+      <div 
+        className="overflow-hidden flex-grow mx-0 sm:mx-2 sm:mx-3 md:mx-4 cursor-grab active:cursor-grabbing sm:cursor-default"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className="flex transition-transform duration-500 ease-in-out py-2 sm:py-3 md:py-4 gap-2 sm:gap-4 md:gap-6" 
           ref={carouselRef}
@@ -77,12 +130,10 @@ export default function Carousel({ children }){
         </div>
       </div>
       
+      {/* Sağ Ok - Sadece desktop ve tablet'te görünür */}
       <button
         onClick={() => slide(1)}
-        className={`bg-brandYellow/60 hover:bg-brandYellow text-white p-2 sm:p-3 rounded-full shadow-lg text-lg sm:text-xl md:text-2xl z-20 transition-colors duration-300 flex-shrink-0 ${
-          currentIndex >= totalCards - cardsPerPage ? 'opacity-0 pointer-events-none' : ''
-        }`}
-        disabled={currentIndex >= totalCards - cardsPerPage}
+        className="hidden sm:flex bg-brandYellow/60 hover:bg-brandYellow text-white p-2 sm:p-3 rounded-full shadow-lg text-lg sm:text-xl md:text-2xl z-20 transition-colors duration-300 flex-shrink-0"
         aria-label="Next slide"
       >
         <svg width="40" height="40" className="sm:w-[50px] sm:h-[50px] md:w-[60px] md:h-[60px]" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

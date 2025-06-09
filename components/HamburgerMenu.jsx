@@ -3,11 +3,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import NavLink from './navLink';
 import { useState } from "react"
-import { menuLinks } from '@/libs/menuLinks';
+import { menuLinks, KyokushinMenuLinks } from '@/libs/menuLinks';
+import { usePathname } from 'next/navigation';
+
 
 
 
 export default function HamburgerMenu(){
+
+    const pathname = usePathname()
+
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     
         const toggleMenu = () => {
@@ -34,7 +39,7 @@ export default function HamburgerMenu(){
                     <nav className="pt-20 px-6">
                         <ul className="space-y-6 font-blackOpsOne text-xl">
                             <NavLink
-                                navLink={menuLinks}
+                                navLink={pathname.startsWith("/kyokushin")? KyokushinMenuLinks  : menuLinks}
                                 className="block py-2 hover:text-brandYellow active:text-brandYellow transition-colors"
                                 onClick={closeMenu}
                             />

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "next/link"
+import FooterLinks from "./footerLinks"
 import Instagram from "./Instagram"
 
 export default function Footer(){
@@ -27,18 +27,9 @@ export default function Footer(){
                 <div className="flex-shrink-0">
                     <ul className="font-openSans text-center flex flex-col gap-1 sm:gap-2">
                         <p className="font-blackOpsOne text-base sm:text-lg mb-2 text-brandYellow">Linkler</p>
-                        <li className="hover:text-brandYellow transition-colors duration-200 text-sm sm:text-base">
-                            <Link href="/">Anasayfa</Link>
-                        </li>
-                        <li className="hover:text-brandYellow transition-colors duration-200 text-sm sm:text-base">
-                            <Link href="/kyokushin">Kyokushin</Link>
-                        </li>
-                        <li className="hover:text-brandYellow transition-colors duration-200 text-sm sm:text-base">
-                            <Link href="/hakkimizda">Hakkımızda</Link>
-                        </li>
-                        <li className="hover:text-brandYellow transition-colors duration-200 text-sm sm:text-base">
-                            <Link href="/iletisim">İletişim</Link>
-                        </li>
+                        
+                        <FooterLinks />
+                       
                     </ul>
                 </div>
 
