@@ -3,35 +3,33 @@ import ImageText from "@/components/imageText";
 import Carousel from "@/components/carousel";
 import Card from "@/components/card";
 import { fitnesscardContent } from "@/libs/cardContent";
-import WhatsAppButton from "@/components/whatsappButton";
+
 
 
 
 export default function Home() {
   return <>
   <Hero 
-    title="DİSİPLİNİNİ GÖSTER"
-    text="En İyi vücudu İnşa et"
-    bgImageUrl="/pexels-victorfreitas-791763.jpg"
+    title="DEĞİŞİME HAZIR MISIN?"
+    text="Sadece vücudunu değil, hayatını da şekillendir."
+    bgImageUrl="/danielle-cerullo-CQfNt66ttZM-unsplash.jpg"
   />
   <ImageText 
     imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
-    title="Header"
-    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non dignissimos porro deserunt iusto a iure aspernatur eaque odio totam reprehenderit, consequuntur cum vero. Ab illum adipisci error nam voluptatibus?
-  Qui delectus vel vero, "
+    title="SİZE ÖZEL YOL HARİTASI"
+    description=" Herkesin vücudu ve hedefi farklıdır. Alanında uzman ekibimiz, sizinle bire bir ilgilenerek hedeflerinize en uygun antrenman ve beslenme programını oluşturur. Sadece bir spor salonu değil, başarınıza giden yolda en güvenilir partneriniz olmak için buradayız."
   />
   <ImageText 
     imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
-    title="Header"
-    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum non dignissimos porro deserunt iusto a iure aspernatur eaque odio totam reprehenderit, consequuntur cum vero. Ab illum adipisci error nam voluptatibus?
-  Qui delectus vel vero,"
+    title="BİR SALONDAN DAHA FAZLASI"
+    description="Biz, hedeflerine tutkuyla bağlı insanlardan oluşan bir topluluğuz. Burada sadece antrenman yapmaz, aynı zamanda ilham alır, tecrübelerinizi paylaşır ve birbirinizi daha iyiye teşvik edersiniz. Eğitmenlerimiz ve diğer üyelerimizle birlikte, bu yolculukta sizin yanınızdayız."
     reverse
   />
 
 
       <div className="text-center mt-[60] mb-[30]">
-          <h1 className=" font-blackOpsOne text-4xl text-brandYellow uppercase  ">HEADER</h1>
-          <p className="font-openSans capitalize">Subtext</p>
+          <h1 className=" font-blackOpsOne text-4xl text-brandYellow uppercase  ">ARAMIZA KATIL, FARKI HİSSET</h1>
+          <p className="font-openSans capitalize">Profesyonel eğitmenlerle hedeflerine güvenle ulaş.</p>
       </div>
 
       <Carousel>

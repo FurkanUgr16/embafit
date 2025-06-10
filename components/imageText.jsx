@@ -16,7 +16,7 @@ export default function ImageText({imageUrl, title, description, reverse, alt}){
                 }
             </div>
             <div className="w-full md:w-1/2 px-2 sm:px-0">
-                <h2 className="text-center sm:text-left text-2xl sm:text-3xl md:text-4xl font-bold font-blackOpsOne mb-3 sm:mb-4 uppercase text-brandYellow leading-tight">
+                <h2 className=" text-brandYellow text-center sm:text-left text-2xl sm:text-3xl md:text-4xl font-blackOpsOne mb-3 sm:mb-4 uppercase text-brandYellow leading-tight">
                     {title}
                 </h2>
                 <p className="text-gray-600 font-openSans text-base sm:text-lg md:text-xl text-center sm:text-left leading-relaxed"> 
