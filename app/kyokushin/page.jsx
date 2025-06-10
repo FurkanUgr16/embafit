@@ -1,5 +1,10 @@
+import Hero from "@/components/hero"
 export default function KyokushinHome(){
     return<>
-        <h1>Kyokushin</h1>
+          <Hero 
+            title="Header"
+            text="Subtext"
+            bgImageUrl="/karateHero.jpg"
+          />
     </>
 }

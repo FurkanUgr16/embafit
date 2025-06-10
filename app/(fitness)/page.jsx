@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import ImageText from "@/components/imageText";
 import Carousel from "@/components/carousel";
 import Card from "@/components/card";
+import { fitnesscardContent } from "@/libs/cardContent";
 
 
 
@@ -33,31 +34,7 @@ export default function Home() {
       </div>
 
       <Carousel>
-          <Card
-            title="Ürün 1"
-            description="Bu, ürünlerinizden biri için harika bir açıklama."
-            imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg"
-          />
-          <Card
-            title="Ürün 2"
-            description="İkinci ürünümüz de oldukça etkileyici özelliklere sahip."
-            imageUrl="/pexels-victorfreitas-949131.jpg"
-          />
-          <Card
-            title="BOX"
-            description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="/pexels-victorfreitas-949129.jpg"
-          />
-          <Card
-            title="BOX"
-            description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="/pexels-victorfreitas-949129.jpg"
-          />
-          <Card
-            title="BOX"
-            description="Boks antrenmanlarıyla gücünüzü ve dayanıklılığınızı artırın."
-            imageUrl="/pexels-victorfreitas-949129.jpg"
-          />
+          <Card cardContext={fitnesscardContent} />
   </Carousel>
   
   </>
