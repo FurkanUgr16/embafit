@@ -3,6 +3,7 @@ import ImageText from "@/components/imageText";
 import Carousel from "@/components/carousel";
 import Card from "@/components/card";
 import { fitnesscardContent } from "@/libs/cardContent";
+import WhatsAppButton from "@/components/whatsappButton";
 
 
 
@@ -35,8 +36,7 @@ export default function Home() {
 
       <Carousel>
           <Card cardContext={fitnesscardContent} />
-  </Carousel>
-  
+  </Carousel>  
   </>
 
 }
