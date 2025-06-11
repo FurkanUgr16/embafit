@@ -22,9 +22,9 @@ export default function Header(){
 
             {/* Desktop hover efekti için çizgi */}
               
-              <div className="top-full w-full flex justify-center opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                    <div className="w-[80%] border-t border-gray-300"></div>
-                </div> 
+             <div className="hidden lg:flex top-full w-full justify-center">
+    <div className="w-[80%] border-t border-gray-300"></div>
+</div> 
 
             {/* Desktop Navigation */}
            

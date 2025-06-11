@@ -64,10 +64,61 @@ export default function Carousel({ children }){
     setCurrentIndex(newIndex);
   };
 
-  const handleTouchStart = (e) => { /* ... */ };
-  const handleTouchMove = (e) => { /* ... */ };
-  const handleTouchEnd = () => { /* ... */ };
-  useEffect(() => { /* ... */ }, [isDragging]);
+  const handleTouchStart = (e) => {
+    // Sürüklemenin başladığını işaretle
+    setIsDragging(true);
+    // Dokunmanın başlangıç X pozisyonunu kaydet
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    // Eğer sürükleme başlamadıysa hiçbir şey yapma
+    if (!isDragging) return;
+    // İsteğe bağlı: Yatay sürükleme sırasında dikey kaydırmayı engelle
+    // Bu, daha akıcı bir kullanıcı deneyimi sunabilir.
+    // e.preventDefault(); 
+  };
+
+  const handleTouchEnd = (e) => {
+    // Sürükleme bitti
+    setIsDragging(false);
+
+    // Parmağın kaldırıldığı son X pozisyonunu al
+    const endX = e.changedTouches[0].clientX;
+    // Başlangıç ve bitiş arasındaki farkı hesapla
+    const diff = startX - endX;
+    // Kaydırmanın geçerli sayılması için bir eşik değeri (örneğin 50 piksel)
+    const swipeThreshold = 50;
+
+    if (diff > swipeThreshold) {
+      // Eğer sağdan sola yeterince sürüklendiyse, sonraki slayta git
+      slide(1);
+    } else if (diff < -swipeThreshold) {
+      // Eğer soldan sağa yeterince sürüklendiyse, önceki slayta git
+      slide(-1);
+    }
+    // Eğer sürükleme mesafesi eşik değerinden az ise, hiçbir şey yapma.
+    // Karosel mevcut pozisyonunda kalır.
+  };
+
+  // Sürükleme sırasında sayfanın kaymasını engellemek için useEffect
+  useEffect(() => {
+    const body = document.body;
+    if (isDragging) {
+      // Sürükleme aktifken sayfanın kaymasını engelle
+      body.style.overflow = 'hidden';
+    } else {
+      // Sürükleme bittiğinde normale döndür
+      body.style.overflow = 'auto';
+    }
+
+    // Component unmount olduğunda stilin sıfırlandığından emin ol
+    return () => {
+      body.style.overflow = 'auto';
+    };
+  }, [isDragging]);
+
+  
   useEffect(() => {
     if (carouselRef.current && carouselRef.current.children[0]) {
       const cardWidth = carouselRef.current.children[0].offsetWidth;

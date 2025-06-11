@@ -14,7 +14,7 @@ export default function KyokushinLayout({children}){
          <html lang="tr">
               <body>
                 <Header />
-                <WhatsAppButton />
+                <WhatsAppButton message="Merhaba karate salonu hakkında bilgi almak istiyorum" />
                 {children}
                 <Footer />
               </body>

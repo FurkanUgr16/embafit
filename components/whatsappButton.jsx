@@ -4,7 +4,7 @@ import { useState } from 'react';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'; // WhatsApp simgesini içe aktarın
 
 const WhatsAppButton = ({ 
-  phoneNumber = "905522241633", 
+  phoneNumber = "905310804269", 
   message = "Merhaba, size ulaşmak istiyorum." 
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
