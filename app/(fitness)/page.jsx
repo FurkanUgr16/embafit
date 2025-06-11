@@ -2,7 +2,7 @@ import Hero from "@/components/hero";
 import ImageText from "@/components/imageText";
 import Carousel from "@/components/carousel";
 import Card from "@/components/card";
-import { fitnesscardContent } from "@/libs/cardContent";
+import { fitnessCardContent } from "@/libs/cardContent";
 
 
 
@@ -33,8 +33,8 @@ export default function Home() {
       </div>
 
       <Carousel>
-          <Card cardContext={fitnesscardContent} />
-  </Carousel>  
+          <Card cardContext={fitnessCardContent} />
+      </Carousel>  
   </>
 
 }

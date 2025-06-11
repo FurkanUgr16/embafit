@@ -1,7 +1,36 @@
+"use client"; // Hook'lar kullanıldığı için bu direktif gerekli
+
+// 1. Gerekli modülleri içe aktarıyoruz
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+// 2. Animasyon variant'larını tanımlıyoruz
+const mapAnimationVariants = {
+  hidden: { opacity: 0, y: 50 }, // Başlangıç: 50px aşağıda ve görünmez
+  visible: { 
+    opacity: 1, 
+    y: 0, // Bitiş: Orijinal pozisyonunda ve görünür
+    transition: { 
+      duration: 0.7, 
+      ease: "easeOut" 
+    } 
+  },
+};
 
 export default function Map(){
+   // 3. Animasyonu tetiklemek için ref ve hook'u ayarlıyoruz
+   const mapRef = useRef(null);
+   const isInView = useInView(mapRef, { once: true, amount: 0.3 }); // %30'u görününce tetikle
+
    return (
-      <div className="flex items-center justify-center p-4">
+      // 4. Ana div'i motion.div'e çevirip animasyon proplarını ekliyoruz
+      <motion.div 
+         ref={mapRef}
+         variants={mapAnimationVariants}
+         initial="hidden"
+         animate={isInView ? "visible" : "hidden"}
+         className="flex items-center justify-center p-4"
+      >
          <iframe 
             className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] 
                        sm:w-5/6 md:w-4/5 lg:w-4/5 xl:w-4/5
@@ -11,6 +40,6 @@ export default function Map(){
             loading="lazy" 
             referrerPolicy="no-referrer-when-downgrade">
          </iframe>
-      </div>
+      </motion.div>
    )
 }

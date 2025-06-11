@@ -1,4 +1,4 @@
-export const fitnesscardContent = [
+export const fitnessCardContent = [
     { imageUrl:"/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg", title: "KİŞİSEL ANTRENÖR (PT)", description: "Kişisel hedeflere yönelik, programlı ve denetimli ilerleme imkanı."},
     { imageUrl:"/pexels-victorfreitas-791763.jpg", title: "VÜCUT GELİŞTİRME", description: "Hacim ve estetiğe yönelik, kontrollü ve odaklı antrenman metotları."},
     { imageUrl:"/pexels-victorfreitas-949129.jpg", title: "YAĞ YAKIMI & KARDİYO", description: "Kardiyovasküler kapasiteyi ve antrenman içi iş verimini artırma."},
