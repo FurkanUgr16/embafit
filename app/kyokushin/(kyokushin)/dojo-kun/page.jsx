@@ -10,7 +10,7 @@ const dojoKunData = [
     { japanese: "一、吾々は質実剛健を以て 克己の精神を涵養すること", turkish: "Gerçek gayreti öz inkar ruhunu yetiştirmek için çalışacağız." },
     { japanese: "一、吾々は礼節を重んじ 長上を敬し 粗暴の振る舞いを慎むこと", turkish: "Üstlerimize saygı gösterip şiddetten kaçınarak nezaket kurallarına uyacağız." },
     { japanese: "一、吾々は神仏を尊び 謙譲の美徳を忘れざること", turkish: "Dini ilkelerimizi takip edeceğiz. Tevazü gerçek erdemi asla unutmayacağız."},
-    { japanese: "一、吾々は生涯の修行を空手の道に通じ 極真の道を全うすること", turkish: "Diğer arzuları arayan değil bilgelik ve güçle ileriye bakacağız."},
+    { japanese: "一、吾々は知性と体力とを向上させ、事に望んで過たざること", turkish: "Diğer arzuları arayan değil bilgelik ve güçle ileriye bakacağız."},
     { japanese: "一、吾々は生涯の修行を空手の道に通じ 極真の道を全うすること", turkish: "Karateyi disiplin aracılığı ile tüm hayatımızı, Kyokushin yoluyla gerçek anlamını yerine getirmek için çalışacağız."},
     { japanese: " ", turkish: "OSU!"},
 ];
