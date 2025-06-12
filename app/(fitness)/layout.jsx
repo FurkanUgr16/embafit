@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="tr">
       <body>
         <Header/>
-        <WhatsAppButton message="Merhaba fitness salonu hakkında bilgi almak istiyorum" />
+        <WhatsAppButton message="Merhaba fitness hakkında bilgi almak istiyorum" />
         {children}
         <Footer />
       </body>
