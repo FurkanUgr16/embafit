@@ -41,17 +41,17 @@ export default function Footer(){
                 <div className="flex-shrink-0  flex flex-col items-center text-center justify-center">
                     <p className="m-2 sm:m-2.5 font-blackOpsOne text-base sm:text-lg text-brandYellow">Sosyal Medya Hesaplarımız</p>
                     
-                        <div>
-                            <Instagram className=" flex sm:gap-2 gap-2.5 mb-2.5 hover:text-brandYellow" href="https://www.instagram.com/embafitt/">
-                           <p> EmbaFit - Fitness: </p>
+                        <div >
+                            <Instagram className=" items-center justify-center flex sm:gap-2 gap-2.5 mb-2.5 hover:text-brandYellow" href="https://www.instagram.com/embafitt/">
+                           <p className=" font-openSans text-sm sm:text-m"> EmbaFit: </p>
                         </Instagram>
         
                                  <div className="flex top-full w-full justify-center">
                                     <div className="w-[80%] border-t border-gray-300"></div>
                                 </div> 
 
-                         <Instagram className="flex gap-2.5 mt-2.5 sm:text-lg hover:text-brandYellow" href="https://www.instagram.com/karateacademy_bursa/">
-                           <p> Karate Academy: </p>
+                         <Instagram className=" items-center justify-center flex gap-2.5 mt-2.5 sm:text-lg hover:text-brandYellow" href="https://www.instagram.com/karateacademy_bursa/">
+                           <p className=" font-openSans text-sm sm:text-m"> Karate Academy: </p>
                         </Instagram>
                         </div>
                 </div>
