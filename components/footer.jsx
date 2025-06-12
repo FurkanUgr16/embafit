@@ -3,6 +3,10 @@ import FooterLinks from "./footerLinks"
 import Instagram from "./Instagram"
 
 export default function Footer(){
+
+    const date = new Date()
+    const dateOfYear = date.getFullYear()
+
     return(
         <footer className="relative text-center px-4 sm:px-6 md:px-8 bg-gray-50">
             <div className="mt-8 sm:mt-12 md:mt-[60px] flex justify-center w-full">
@@ -34,16 +38,29 @@ export default function Footer(){
                 </div>
 
                 {/* Social Media Section */}
-                <div className="flex-shrink-0">
-                    <p className="m-2 sm:m-2.5 font-blackOpsOne text-base sm:text-lg text-brandYellow">Sosyal Medya</p>
-                    <Instagram />
+                <div className="flex-shrink-0  flex flex-col items-center text-center justify-center">
+                    <p className="m-2 sm:m-2.5 font-blackOpsOne text-base sm:text-lg text-brandYellow">Sosyal Medya Hesaplarımız</p>
+                    
+                        <div>
+                            <Instagram className=" flex sm:gap-2 gap-2.5 mb-2.5 hover:text-brandYellow" href="https://www.instagram.com/embafitt/">
+                           <p> EmbaFit - Fitness: </p>
+                        </Instagram>
+        
+                                 <div className="flex top-full w-full justify-center">
+                                    <div className="w-[80%] border-t border-gray-300"></div>
+                                </div> 
+
+                         <Instagram className="flex gap-2.5 mt-2.5 sm:text-lg hover:text-brandYellow" href="https://www.instagram.com/karateacademy_bursa/">
+                           <p> Karate Academy: </p>
+                        </Instagram>
+                        </div>
                 </div>
             </div>
 
             {/* Copyright Section */}
             <div className="border-t border-gray-200 pt-3 sm:pt-4 pb-4 sm:pb-6 mt-4 sm:mt-6">
                 <p className="text-xs sm:text-sm text-gray-500 font-openSans">
-                    © 2025 EMBAFIT. Tüm hakları saklıdır.
+                    © {dateOfYear} EMBAFIT. Tüm hakları saklıdır.
                 </p>
             </div>
         </footer>

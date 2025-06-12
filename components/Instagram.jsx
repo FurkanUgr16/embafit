@@ -2,9 +2,10 @@
 import Link from "next/link"
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-export default function Instagram(){
+export default function Instagram({href, children, className}){
     return(
-        <Link href="https://www.instagram.com/embafitt/">
+        <Link className={className} href={href}>
+            {children}
             <InstagramIcon />
         </Link>
     )

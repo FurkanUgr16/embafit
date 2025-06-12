@@ -14,13 +14,13 @@ export default function KyokushinHome(){
           />
             <ImageText 
               imageUrl="/full-shot-woman-practicing-taekwondo.jpg" alt=" karate"
-              title="Çocuk Sınıfları "
+              title="Çocuklara Özel "
               description="Çocuk sınıflarımız, Kyokushin'in temel değerleri olan saygı, disiplin ve öz denetimi, oyun ve tekniğin birleşimiyle öğretir. Amacımız sadece fiziksel becerileri değil, aynı zamanda odaklanma yeteneğini, sabrı ve zorluklar karşısında yılmama ruhunu geliştirmektir. Güvenli ve destekleyici bir ortamda, çocuklar hem kendilerine hem de çevrelerine karşı sorumluluk sahibi olmayı öğrenir. "
             />
               <ImageText 
                 imageUrl="/black-belt-athlete-practicing-jujitsu-with-determination-generative-ai.jpg" alt="man karate"
                 title="Grup Dersleri "
-                description="Grup derslerimiz, farklı seviyelerdeki öğrencilerin birbirlerinden öğrendiği, karşılıklı saygı ve disiplin içinde ortak bir hedefe ilerlediği yerdir. Bu ortak enerji, bireysel motivasyonu artırır ve Kyokushin yolunda yalnız olmadığınızı hissettirir. "
+                description="Grup derslerimiz, farklı seviyelerdeki öğrencilerin birbirlerinden öğrendiği, karşılıklı saygı ve disiplin içinde ortak bir hedefe ilerlediği yerdir."
               reverse
               />
                 <ImageText 

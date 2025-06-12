@@ -54,7 +54,7 @@ const ImageRow = ({ images, reverse = false, speed = 30, rowIndex = 0 }) => {
           return (
             <div
               key={`${imageSrc}-${rowIndex}-${idx}`}
-              className="flex-shrink-0 relative mr-4 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="flex-shrink-0 relative mr-4 overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               style={{ width: `${imageWidth - 16}px`, height: '100%' }}
             >
               <Image
@@ -68,12 +68,6 @@ const ImageRow = ({ images, reverse = false, speed = 30, rowIndex = 0 }) => {
                   console.warn('Image failed to load:', imageSrc);
                 }}
               />
-              {/* Image title overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
-                <p className="text-white text-sm font-medium truncate">
-                  {imageTitle}
-                </p>
-              </div>
             </div>
           );
         })}
@@ -95,14 +89,14 @@ export default function ThreeRowGridLayout({
 
   if (validImages.length === 0) {
     return (
-      <div className="w-full h-96 bg-gray-100 flex items-center justify-center rounded-lg">
+      <div className="w-full h-96 flex items-center justify-center rounded-lg">
         <span className="text-gray-500 text-lg">No valid images to display</span>
       </div>
     );
   }
 
   return (
-    <div className="w-full py-8 bg-gray-50">
+    <div className="w-full py-8 ">
       <div className="max-w-full">
         {/* Row 1: Left to Right (Normal) */}
         <ImageRow 
