@@ -1,7 +1,10 @@
 export const ImageUrl = [
-    {imageUrl: "/black-belt-athlete-practicing-jujitsu-with-determination-generative-ai.jpg", title: "Image 1"},
-    {imageUrl: "/full-shot-woman-practicing-taekwondo.jpg", title: "Image 2"},
-    {imageUrl: "/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg", title: "Image 3"},
-    {imageUrl: "/pexels-victorfreitas-949131.jpg", title: "Image 4"},
-    {imageUrl: "/black-belt-athlete-practicing-jujitsu-with-determination-generative-ai.jpg", title: "Image 5"},
+    {imageUrl: "/1.jpg", title: "2024 Türkiye Kyokushin Şampiyonası"},
+    {imageUrl: "/2.jpg", title: "2025 Türkiye Şampiyonası Küçükler"},
+    {imageUrl: "/3.jpg", title: "2025 Türkiye Şampiyonası Büyükler"},
+    {imageUrl: "/4.jpg", title: "2024 Balkan Şampiyonası"},
+    {imageUrl: "/6.jpg", title: "2025 Türkiye Şampiyonalığı Antrenörlerle beraber"},
+    {imageUrl: "/7.jpg", title: "Toplu Salon Fotoğrafı"},
+    {imageUrl: "/9.jpg", title: "10 Balkan Kyokushin Karate Birinciliği"},
+    {imageUrl: "/10.jpg", title: "2025 Balkan Şampiyonası"},
 ]

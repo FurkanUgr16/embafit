@@ -15,12 +15,12 @@ export default function Home() {
     bgImageUrl="/danielle-cerullo-CQfNt66ttZM-unsplash.jpg"
   />
   <ImageText 
-    imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
+    imageUrl="/victor-freitas-nlZTjUZX2qo-unsplash.jpg" alt="deadlift"
     title="SİZE ÖZEL YOL HARİTASI"
     description=" Herkesin vücudu ve hedefi farklıdır. Alanında uzman ekibimiz, sizinle bire bir ilgilenerek hedeflerinize en uygun antrenman ve beslenme programını oluşturur. Sadece bir spor salonu değil, başarınıza giden yolda en güvenilir partneriniz olmak için buradayız."
   />
   <ImageText 
-    imageUrl="/low-angle-view-unrecognizable-muscular-build-man-preparing-lifting-barbell-health-club.jpg" alt="deadlift"
+    imageUrl="/pexels-victorfreitas-703016.jpg" alt="deadlift"
     title="BİR SALONDAN DAHA FAZLASI"
     description="Biz, hedeflerine tutkuyla bağlı insanlardan oluşan bir topluluğuz. Burada sadece antrenman yapmaz, aynı zamanda ilham alır, tecrübelerinizi paylaşır ve birbirinizi daha iyiye teşvik edersiniz. Eğitmenlerimiz ve diğer üyelerimizle birlikte, bu yolculukta sizin yanınızdayız."
     reverse

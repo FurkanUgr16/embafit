@@ -57,7 +57,7 @@ export default function ContactInfo() {
                         <PhoneIcon className="text-blue-600 mt-1 text-xl md:text-2xl flex-shrink-0" />
                         <div className="flex-1">
                             <h4 className="font-semibold text-gray-800 text-sm md:text-base mb-1 font-openSans">Telefon</h4>
-                            <p className="text-gray-600 text-sm md:text-base font-openSans">+90 224 XXX XX XX</p>
+                            <p className="text-gray-600 text-sm md:text-base font-openSans">+90 531 080 42 69</p>
                         </div>
                     </div>
                     {/* Adres */}
@@ -65,7 +65,7 @@ export default function ContactInfo() {
                         <LocationPinIcon className="text-red-600 mt-1 text-xl md:text-2xl flex-shrink-0" />
                         <div className="flex-1">
                             <h4 className="font-semibold text-gray-800 text-sm md:text-base mb-1 font-openSans">Adres</h4>
-                            <p className="text-gray-600 text-sm md:text-base leading-relaxed font-openSans">Kyokushin Karate Academy Emba Fit Spor Kulübü Bursa</p>
+                            <p className="text-gray-600 text-sm md:text-base leading-relaxed font-openSans">Ertuğrul Mahallesi, Elmas Sokak. No:21, 16000 Ni̇lüfer/Bursa</p>
                         </div>
                     </div>
                 </div>

@@ -8,19 +8,23 @@ export default function AboutUs(){
              title="EMRE BAYRAM"
              alt="EMRE BAYRAM"
              imageUrl="/john-fornander-TAZoUmDqzXk-unsplash.jpg"
-             description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam maxime amet dolores reprehenderit minima facere recusandae hic nulla, possimus, obcaecati id molestiae veniam non! Dolore a optio in odit dolorum.
-        Voluptatum, assumenda asperiores cum nihil ab vero similique impedit consequatur, id nobis nulla non vel accusamus soluta nisi eaque eveniet! Aliquid provident ullam magnam eaque maxime vel doloremque optio? Quod.
-        Reprehenderit nihil minima molestias ea possimus dignissimos, consectetur temporibus quibusdam laborum vero, ullam dicta eum officiis explicabo ratione cum ab deserunt quasi saepe debitis sint facere sunt. Asperiores, rerum dolore.
-        Eaque fugiat aliquam corporis neque cupiditate iusto recusandae nam nostrum quasi maxime magnam enim officiis molestiae qui, id a illo blanditiis rem, expedita inventore aut ullam sequi deleniti exercitationem. Dicta."
+             description="Merhaba, ben Emre Bayram. Uludağ Üniversitesi Spor Bilimleri Fakültesi mezunuyum. 3. kademe Vücut Geliştirme ve Fitness antrenörlüğü belgesine sahibim. Aynı zamanda 2. kademe Kyokushin Karate antrenörü, hakemi ve milli sporcusuyum.
+
+Spor kariyerim boyunca Kyokushin Karate branşında Türkiye şampiyonlukları, uluslararası turnuva şampiyonlukları, Balkan 3.lüğü ve Avrupa 2.liği gibi birçok önemli başarıya imza attım.
+
+Hedefim, sahip olduğum bilgi, tecrübe ve disiplinle hem bireysel hem de grup antrenmanlarında maksimum verim sağlayarak sporcuları en iyi versiyonlarına ulaştırmak. Kurucusu olduğum bu spor salonunda sizleri, hem fiziksel hem de zihinsel anlamda daha güçlü bir yaşama davet ediyorum."
              />
             <ImageText 
             title="EMİR BAYRAM"
             alt="EMİR BAYRAM"
             imageUrl="/john-fornander-TAZoUmDqzXk-unsplash.jpg"
-            description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam maxime amet dolores reprehenderit minima facere recusandae hic nulla, possimus, obcaecati id molestiae veniam non! Dolore a optio in odit dolorum.
-        Voluptatum, assumenda asperiores cum nihil ab vero similique impedit consequatur, id nobis nulla non vel accusamus soluta nisi eaque eveniet! Aliquid provident ullam magnam eaque maxime vel doloremque optio? Quod.
-        Reprehenderit nihil minima molestias ea possimus dignissimos, consectetur temporibus quibusdam laborum vero, ullam dicta eum officiis explicabo ratione cum ab deserunt quasi saepe debitis sint facere sunt. Asperiores, rerum dolore.
-        Eaque fugiat aliquam corporis neque cupiditate iusto recusandae nam nostrum quasi maxime magnam enim officiis molestiae qui, id a illo blanditiis rem, expedita inventore aut ullam sequi deleniti exercitationem. Dicta."
+            description="
+
+Merhaba, ben Emir Bayram. Kyokushin Karate branşında milli sporcuyum. Uzun yıllardır sürdürdüğüm spor kariyerimde Türkiye, Balkan ve Avrupa şampiyonlukları elde ettim.
+
+Disiplin, azim ve yüksek motivasyonla geçen bu süreçte edindiğim tecrübeleri, spor salonumuzda genç sporculara aktarmaktan ve onların gelişimlerine katkı sağlamaktan büyük bir heyecan duyuyorum.
+
+Hedefim; yalnızca fiziksel değil, zihinsel olarak da güçlü, özgüveni yüksek ve kararlı sporcular yetiştirmek. Sizleri bu yolculuğa bizimle birlikte çıkmaya davet ediyorum."
             reverse />
         </>
     )
