@@ -1,4 +1,10 @@
 import ImageText from "@/components/imageText"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> b9c81bd (seo changes)
 export default function AboutUs(){
     return(
         <>
@@ -7,7 +13,11 @@ export default function AboutUs(){
             <ImageText
              title="EMRE BAYRAM"
              alt="EMRE BAYRAM"
+<<<<<<< HEAD
              imageUrl="/john-fornander-TAZoUmDqzXk-unsplash.jpg"
+=======
+             imageUrl={`https://res.cloudinary.com/dshdin1nx/image/upload/v1755161381/john-fornander-TAZoUmDqzXk-unsplash_lpneto.jpg`}
+>>>>>>> b9c81bd (seo changes)
              description="Merhaba, ben Emre Bayram. Uludağ Üniversitesi Spor Bilimleri Fakültesi mezunuyum. 3. kademe Vücut Geliştirme ve Fitness antrenörlüğü belgesine sahibim. Aynı zamanda 2. kademe Kyokushin Karate antrenörü, hakemi ve milli sporcusuyum.
 
 Spor kariyerim boyunca Kyokushin Karate branşında Türkiye şampiyonlukları, uluslararası turnuva şampiyonlukları, Balkan 3.lüğü ve Avrupa 2.liği gibi birçok önemli başarıya imza attım.
@@ -17,7 +27,11 @@ Hedefim, sahip olduğum bilgi, tecrübe ve disiplinle hem bireysel hem de grup a
             <ImageText 
             title="EMİR BAYRAM"
             alt="EMİR BAYRAM"
+<<<<<<< HEAD
             imageUrl="/john-fornander-TAZoUmDqzXk-unsplash.jpg"
+=======
+            imageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161381/john-fornander-TAZoUmDqzXk-unsplash_lpneto.jpg"
+>>>>>>> b9c81bd (seo changes)
             description="
 
 Merhaba, ben Emir Bayram. Kyokushin Karate branşında milli sporcuyum. Uzun yıllardır sürdürdüğüm spor kariyerimde Türkiye, Balkan ve Avrupa şampiyonlukları elde ettim.

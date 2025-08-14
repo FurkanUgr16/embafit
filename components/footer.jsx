@@ -17,7 +17,11 @@ export default function Footer(){
                 {/* Logo Section */}
                 <div className="flex-shrink-0 flex justify-center items-center">
                     <Image
+<<<<<<< HEAD
                         src="/EMBAFIT-01.png"
+=======
+                        src="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161367/EMBAFIT-01_dolmev.png"
+>>>>>>> b9c81bd (seo changes)
                         alt="Logo Img"
                         height={180}
                         width={180}

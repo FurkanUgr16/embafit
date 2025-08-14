@@ -1,7 +1,10 @@
 import HamburgerMenu from "./HamburgerMenu"
 import DesktopNav from "./desktopNav"
 import Image from "next/image"
+<<<<<<< HEAD
 import Logo from "../assets/EMBAFIT-01.png"
+=======
+>>>>>>> b9c81bd (seo changes)
 import Link from "next/link"
 export default function Header(){
 
@@ -10,7 +13,11 @@ export default function Header(){
         <header className="relative group py-4 bg-gray-50">
             <div className="flex justify-center items-center relative">
                 <Link href="/" >
+<<<<<<< HEAD
                     <Image className="flex justify-center items-center" src={Logo} width={180} height={180} alt="logo img"></Image>     
+=======
+                    <Image className="flex justify-center items-center" src="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161367/EMBAFIT-01_dolmev.png" width={180} height={180} alt="logo img"></Image>     
+>>>>>>> b9c81bd (seo changes)
                 </Link>
 
                 
