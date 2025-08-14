@@ -6,7 +6,7 @@ import "../globals.css";
 
 export const metadata = {
   title: "EmbaFit - Bursa Fitness ve Kyokushin Karate Salonu",
-  description: "[Şehir]'de modern fitness olanakları ve geleneksel Kyokushin Karate eğitimini bir araya getiren EmbaFit'e hoş geldiniz. Sağlıklı bir yaşam için bize katılın.",
+  description: "Bursa'da modern fitness olanakları ve geleneksel Kyokushin Karate eğitimini bir araya getiren EmbaFit'e hoş geldiniz. Sağlıklı bir yaşam için bize katılın.",
 };
 export default function RootLayout({ children }) {
   return (
