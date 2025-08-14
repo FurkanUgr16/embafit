@@ -9,15 +9,15 @@ export default function Home() {
     <Hero 
       title="DEĞİŞİME HAZIR MISIN?"
       text="Sadece vücudunu değil, hayatını da şekillendir."
-      bgImageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161369/danielle-cerullo-CQfNt66ttZM-unsplash_nueam5.jpg"
+      bgImageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/q_100/v1755161369/danielle-cerullo-CQfNt66ttZM-unsplash_nueam5.jpg"
     />
     <ImageText 
-      imageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161389/victor-freitas-nlZTjUZX2qo-unsplash_yincfe.jpg" alt="deadlift"
+      imageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/q_100/v1755161389/victor-freitas-nlZTjUZX2qo-unsplash_yincfe.jpg" alt="deadlift"
       title="SİZE ÖZEL YOL HARİTASI"
       description=" Herkesin vücudu ve hedefi farklıdır. Alanında uzman ekibimiz, sizinle bire bir ilgilenerek hedeflerinize en uygun antrenman ve beslenme programını oluşturur. Sadece bir spor salonu değil, başarınıza giden yolda en güvenilir partneriniz olmak için buradayız."
     />
     <ImageText 
-      imageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/v1755161375/pexels-victorfreitas-703016_bdteys.jpg" alt="deadlift"
+      imageUrl="https://res.cloudinary.com/dshdin1nx/image/upload/q_100/v1755161375/pexels-victorfreitas-703016_bdteys.jpg" alt="deadlift"
       title="BİR SALONDAN DAHA FAZLASI"
       description="Biz, hedeflerine tutkuyla bağlı insanlardan oluşan bir topluluğuz. Burada sadece antrenman yapmaz, aynı zamanda ilham alır, tecrübelerinizi paylaşır ve birbirinizi daha iyiye teşvik edersiniz. Eğitmenlerimiz ve diğer üyelerimizle birlikte, bu yolculukta sizin yanınızdayız."
       reverse
